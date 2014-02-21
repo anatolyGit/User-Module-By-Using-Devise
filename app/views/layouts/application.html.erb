@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnatolyEdouard</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+	<p class="navbar-text pull-right">
+	
+	<div id="page">
+		<div id="primary-nav" class="hide-if-iframed">
+			<a class="logo" href="/"><span>Lucidchart</span></a>
+			<div id="user_nav" class = "user-info">
+				<% if user_signed_in? %>
+				  <div id = "login-user" class="tab">Hi. <strong><%= current_user.email %></strong>!</div>
+				  <div class="tab">
+				  	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> 
+				  	<div class="arrow-r-13"></div>
+				  </div>
+				  <div class="tab">
+				  	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link '  %><div class="arrow-r-13"></div>
+				  </div>
+				<% else %>
+				 <div class="tab">
+				  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> <div class="arrow-r-13"></div>
+				 </div>
+				 <div class="tab">
+				  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+				  <div class="arrow-r-13"></div>
+				 </div>
+				<% end %>
+
+			</div>	
+		</div>
+		<div id="page-body">
+			<div id="page-content" class="container_12">
+			   <div id="content" class="grid_12 lucid">
+			   	   <%= yield %>
+			   </div>
+			</div>
+			<div class="clear"></div>
+		</div>
+    </div>
+
+</body>
+</html>

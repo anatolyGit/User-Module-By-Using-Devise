@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 1
+  followed_course_id: 1
+  individual_rating: 1
+  personal_score: 1
+
+two:
+  student_id: 1
+  followed_course_id: 1
+  individual_rating: 1
+  personal_score: 1

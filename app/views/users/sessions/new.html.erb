@@ -1,0 +1,36 @@
+<section class="accept-invite">
+   <h1>Accept Invitation for “Decks Index”</h1>
+   <h2><span id="signin-subheading" >Sign in to access this document.</span></h2>
+   <div class="spacer"></div>
+   <div class="grid_4 prefix_2 alpha">
+		<h2>Sign in</h2>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		  <div ><%= f.label :email %><br />
+		  <%= f.email_field :email, :autofocus => true %></div>
+		  <div><%= f.label :password %><br />
+		  <%= f.password_field :password %></div>
+		  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+		  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+		  <% end -%>
+		  <% if devise_mapping.rememberable? -%>
+	       <div style="display:inline-flex;"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+		  <% end -%>
+
+		  <div><%= f.submit "Sign in", :class => "button green" %></div>
+		<% end %>
+		<small>By registering I agree to Lucid Software's <a target="_blank" href="/pages/tos" id="tos_link">Terms of Service</a>.</small>
+		<hr><h2>Or sign up with:</h2>
+		<a class="si-button google" href="/users/googleFederatedLogin?return_url=%2Finvitations%2Faccept%2F53035de6-1384-468c-b0b1-383f0a005334">Google</a>
+		<a class="si-button yahoo" href="/users/yahooLogin?return_url=%2Finvitations%2Faccept%2F53035de6-1384-468c-b0b1-383f0a005334">Yahoo</a>
+		<div class="spacer"></div>
+		<hr>
+		<div class="spacer"></div>
+		<%= render "users/shared/links" %>
+   </div>
+   <div class="grid_4 omega">
+		<div class="preview-wrapper">
+			<span>Preview</span>
+			<%= image_tag("290.gif") %>
+		</div>
+   </div>
+</section>

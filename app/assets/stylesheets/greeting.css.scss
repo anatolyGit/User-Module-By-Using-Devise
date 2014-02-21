@@ -1,0 +1,90 @@
+// Place all the styles related to the Greeting controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#primary-nav {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #E5E5E5;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    height: 94px;
+    position: relative;
+}
+* {
+    font-family: "Lucida Sans","Lucida Grande",Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #777777;
+    font-size: 12px;
+}
+
+#primary-nav #user_nav {
+    height: 28px;
+    position: absolute;
+    right: 39px;
+    top: 0;
+}
+
+#primary-nav #user_nav a {
+    color: #FFF;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    padding: 6px 6px 6px 0;
+    text-decoration: none;
+}
+
+#primary-nav .user-info .tab {
+    background-color: #F78D1E;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    padding: 0 28px;
+    margin-left: 5px;
+}
+#primary-nav .user-info .tab a {
+    color: #FFFFFF;
+}
+.arrow-r-13 {
+    background: url("index.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#primary-nav .user-info .tab a .arrow-r-13 {
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+.arrow-l-13, .arrow-r-13 {
+    float: right;
+    height: 16px;
+    margin-top: 6px;
+    width: 13px;
+}
+
+#page {
+    margin: 0 auto;
+    position: relative;
+    width: 1020px;
+}
+
+#primary-nav #user_nav #login-user{
+    background-color:#eee;
+}
+
+#user_email, #user_password, #user_password_confirmation{
+    -moz-box-sizing: border-box;
+    -moz-user-select: text;
+    border: 1px solid #CCCCCC;
+    display: block;
+    font-size: 14px;
+    padding: 3px 5px;
+    width:100%;
+}
